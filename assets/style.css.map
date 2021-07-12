@@ -2,7 +2,11 @@
     "version": 3,
     "mappings": "",
     "sources": [
+<<<<<<< HEAD
         "../scss/style.scss"
+=======
+        "style.scss"
+>>>>>>> dev
     ],
     "names": [],
     "file": "style.css"
