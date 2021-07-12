@@ -1,8 +1,9 @@
-
 import {Score} from "script.js";
-//var Score = document.getElementById("score").textContent;
+
+
 let priceAutoClick = 100;
 const buttonAutoClick = document.getElementById("auto-click");
+
 
 if((document.getElementById("auto-click").clicked == true) && (priceAutoClick === Number(Score))) {
     buttonAutoClick.disabled = false;
@@ -18,6 +19,7 @@ if((document.getElementById("auto-click").clicked == true) && (priceAutoClick ==
 } else {
     buttonAutoClick.disabled = true;
 }
+
 
 //debugging
 console.log(Score);
