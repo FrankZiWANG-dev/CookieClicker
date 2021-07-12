@@ -7,39 +7,27 @@ const scoreTitle = document.getElementById("score");
 
 // FUNCTION CLICKER
 
-document.getElementById("salty").onclick = function () {
-  var score = parseInt(document.getElementById("score").innerHTML);
-  score++;
-  document.getElementById("score").innerHTML = score;
-};
+function clicker() {
+  document.getElementById("salty").onclick = function () {
+    var score = parseInt(document.getElementById("score").innerHTML);
+    score++;
+    document.getElementById("score").innerHTML = score;
+  };
+}
 
 // FUNCTION DISABLE
 
-function disableButton() {
-  document.getElementById("double").disabled = true;
-  //let btnClick = document.querySelectorAll(".btn")
-}
+// function disableButton() {
+//   document.getElementById("double").disabled = true;
+//   //let btnClick = document.querySelectorAll(".btn")
+// }
+
 // FUNCTION x2
 
-// if (score == priceBtnMulti) {
-//   btnMulti.addEventListener("click", () => {
-//     score = score - priceBtnMulti;
-//     score.innerHTML = score;
-//     multiplier = multiplier * 2;
-//   });
-// } else {
-//   disableButton();
-// }
-
-//if (score == priceBtnMulti) {
-btnMulti.addEventListener("click", () => {
-  score = score - priceBtnMulti;
-  scoreTitle.innerHTML = score;
-  priceBtnMulti = Math.floor(priceBtnMulti * 2);
-  let displayPrice = btnMulti.getElementsByClassName("price");
-  displayPrice[0].children[0].textContent = priceBtnMulti;
-  //multiplier = multiplier * 2;
-});
-// } else {
-//   disableButton();
-// }
+if (score == 25) {
+  document.getElementById("double").removeAttribute("disabled");
+  btnMulti.addEventListener("click", () => {
+    score = score - priceBtnMulti;
+    score.innerHTML = score;
+  });
+}
