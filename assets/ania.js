@@ -14,18 +14,22 @@ function clicker() {
     document.getElementById("score").innerHTML = score;
   };
 }
+clicker();
 
-// FUNCTION DISABLE
+// DISABLE
 
-// function disableButton() {
-//   document.getElementById("double").disabled = true;
-//   //let btnClick = document.querySelectorAll(".btn")
-// }
+function disable() {
+  document.getElementById("double").disabled = true;
+  document.getElementById("boost").disabled = true;
+  document.getElementById("auto-click").disabled = true;
 
+  if (score >= priceBtnMulti) {
+    document.getElementById("double").disabled = false;
+  }
+}
 // FUNCTION x2
 
-if (score == 25) {
-  document.getElementById("double").removeAttribute("disabled");
+if (score >= priceBtnMulti) {
   btnMulti.addEventListener("click", () => {
     score = score - priceBtnMulti;
     score.innerHTML = score;
