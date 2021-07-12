@@ -1,9 +1,13 @@
 
-var Score = 0;
+import {Score} from "script.js";
 //var Score = document.getElementById("score").textContent;
+let priceAutoClick = 100;
+const buttonAutoClick = document.getElementById("auto-click");
 
-
-document.getElementById("auto-click").addEventListener("click", () =>{
+if((document.getElementById("auto-click").clicked == true) && (priceAutoClick === Number(Score))) {
+    buttonAutoClick.disabled = false;
+    Score = Score - priceAutoClick;
+    document.getElementById("auto-click").addEventListener("click", () =>{
         var autoclick = window.setInterval(
             function autoClickFunction () {
                 Score ++;
@@ -11,8 +15,9 @@ document.getElementById("auto-click").addEventListener("click", () =>{
                 console.log(Score);
             }, 5000);
 });
+} else {
+    buttonAutoClick.disabled = true;
+}
 
-var test = 100;
 //debugging
 console.log(Score);
-export {test};
