@@ -1,13 +1,4 @@
-var score = parseInt(document.getElementById("score").innerHTML);
-function NormalClick() {
-    score++;
-    document.getElementById("score").innerHTML = score; 
-}
-
+//normal click
 document.getElementById('salty').onclick=function(){
-    NormalClick();
-    console.log (score);
-    //debug
+    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
-
-export {score, NormalClick};
