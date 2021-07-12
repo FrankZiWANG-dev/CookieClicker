@@ -1,25 +1,27 @@
-import {Score} from "script.js";
+import {score} from "/assets/marty.js";
 
 
-let priceAutoClick = 100;
+let priceAutoClick = 5;
 const buttonAutoClick = document.getElementById("auto-click");
+console.log("Joao score is = " + score);
 
-
-if((document.getElementById("auto-click").clicked == true) && (priceAutoClick === Number(Score))) {
+if (priceAutoClick > score) {
+    buttonAutoClick.disabled = true;
+    console.log("Joao score is = " + score);
+} else {  
     buttonAutoClick.disabled = false;
-    Score = Score - priceAutoClick;
     document.getElementById("auto-click").addEventListener("click", () =>{
         var autoclick = window.setInterval(
             function autoClickFunction () {
-                Score ++;
+                score - priceAutoClick;
+                score ++;
                 //debugging
-                console.log(Score);
+                console.log("Joao score is = " + score);
             }, 5000);
-});
-} else {
-    buttonAutoClick.disabled = true;
+    });
 }
 
 
+
 //debugging
-console.log(Score);
+console.log(score);
