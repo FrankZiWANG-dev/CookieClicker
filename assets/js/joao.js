@@ -5,8 +5,8 @@ var Score = 0;
 
 document.getElementById("auto-click").addEventListener("click", () =>{
         var autoclick = window.setInterval(
-            function () {
-                Score = Score + document.getElementById("Start").textContent;
+            function autoClickFunction () {
+                Score ++;
                 //debugging
                 console.log(Score);
             }, 5000);
