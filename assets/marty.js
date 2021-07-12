@@ -1,5 +1,11 @@
-import {Score} from "script.js";
+var score = parseInt(document.getElementById("score").innerHTML);
+function NormalClick() {
+    score++;
+    document.getElementById("score").innerHTML = score; 
+}
 
 document.getElementById('salty').onclick=function(){
-    document.getElementById("score").innerHTML = Score++;
+    NormalClick();
 }
+
+export {score, NormalClick};
