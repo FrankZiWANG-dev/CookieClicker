@@ -1,8 +1,6 @@
-var score = parseInt(document.getElementById("score").innerHTML);
-
-let multiplier = 1;
-let priceBtnMulti = 25; // initial price of the button
-const btnMulti = document.getElementById("double");
+var valueClick = 1;
+var priceBtnMulti = 25; // initial price of the button
+const btnMulti = document.getElementById("multiX2");
 const scoreTitle = document.getElementById("score");
 
 // FUNCTION CLICKER
@@ -19,19 +17,19 @@ clicker();
 // DISABLE
 
 function disable() {
-  document.getElementById("double").disabled = true;
+  document.getElementById("multiX2").disabled = true;
   document.getElementById("boost").disabled = true;
   document.getElementById("auto-click").disabled = true;
-
-  if (score >= priceBtnMulti) {
-    document.getElementById("double").disabled = false;
-  }
+}
+disable();
+if (score >= priceBtnMulti) {
+  document.getElementById("multiX2").disabled = false;
 }
 // FUNCTION x2
 
-if (score >= priceBtnMulti) {
-  btnMulti.addEventListener("click", () => {
-    score = score - priceBtnMulti;
-    score.innerHTML = score;
-  });
-}
+btnMulti.addEventListener("click", () => {
+  if (score >= priceBtnMulti) {
+    score -= priceBtnMulti;
+    valueClick += 1;
+  }
+});
