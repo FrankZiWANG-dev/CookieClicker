@@ -1,12 +1,25 @@
-var Score = document.getElementById("score").textContent;
-// console.log(Score);
+var score = parseInt(document.getElementById("score").innerHTML);
 
 let multiplier = 1;
-let priceBtnMulti = 100;
-const btnMulti = document.getElementById("multiplier");
+let priceBtnMulti = 25; // initial price of the button
+const btnMulti = document.getElementById("double");
 
-btnMulti.addEventListener("click", () => {
-  Score = Score - priceBtnMulti;
-  score.innerHTML = Score;
-  multiplier = multiplier * 2;
-});
+document.getElementById("salty").onclick = function () {
+  var score = parseInt(document.getElementById("score").innerHTML);
+  score++;
+  document.getElementById("score").innerHTML = score;
+};
+
+function disableButton() {
+  document.getElementById("double").disabled = true;
+}
+
+if (score == priceBtnMulti) {
+  btnMulti.addEventListener("click", () => {
+    score = score - priceBtnMulti;
+    score.innerHTML = score;
+    multiplier = multiplier * 2;
+  });
+} else {
+  disableButton();
+}
