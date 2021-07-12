@@ -1,5 +1,5 @@
 document.getElementById("boost").addEventListener("click", () => {
-    
+
 var BoostRemaining = 30;
 var BoostTimer = document.getElementById('BoostTimer');
 
