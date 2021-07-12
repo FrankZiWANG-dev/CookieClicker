@@ -12,5 +12,7 @@ document.getElementById("auto-click").addEventListener("click", () =>{
             }, 5000);
 });
 
+var test = 100;
 //debugging
 console.log(Score);
+export {test};
