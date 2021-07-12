@@ -6,6 +6,8 @@ function NormalClick() {
 
 document.getElementById('salty').onclick=function(){
     NormalClick();
+    console.log (score);
+    //debug
 }
 
 export {score, NormalClick};
