@@ -1,11 +1,11 @@
 import {Score} from '/assets/script.js';
 
 function NormalClick() {
-    document.getElementById("score").innerHTML = Score++;
+    document.getElementById("score").innerHTML = Number(Score + 1);
 }
 
-document.getElementById('salty').onclick=function(){
+document.getElementById('salty').addEventListener("click", () => {
     NormalClick();
-}
+})
 
-export {NormalClick};
+// export {NormalClick};
