@@ -2,7 +2,7 @@
 
 
 let priceAutoClick = 5;
-const buttonAutoClick = score");
+const buttonAutoClick = score;
 //debugging
 console.log("Joao score 1st is = " + score);
 
