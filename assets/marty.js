@@ -34,3 +34,10 @@ document.getElementById('salty').addEventListener("click",() => {
     document.getElementById("hightscore").innerHTML = hightscrore;
 
 });
+//Score fonction
+
+// function check(x,y) {
+//     if (Score >= x) {
+//         document.getElementById(y).disabled = false;
+//     }
+// }

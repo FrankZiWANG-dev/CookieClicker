@@ -1,26 +1,54 @@
 //import { score, NormalClick } from "./marty.js";
 
-let score = 0;
-let valueClick = 0;
-let priceBtnMulti = 10; // initial price of the button
-const btnMulti = (document.getElementById("multiX2").disabled = true);
+let priceBtnMulti = 25; // initial price of the button
+let btnMulti = (document.getElementById("multiX2").disabled = true);
+
+function SingleClick() {
+  if (bonus === 1) {
+    Score += 2;
+  } else if (bonus === 0) {
+    Score++;
+  }
+}
+
+// Salt rotation
+
+function myFunction() {
+  var img = document.getElementById("salty");
+  img.setAttribute("class", "rotated-image");
+}
+
+//  Click +2
+
+function multi() {
+  Score += 2;
+}
 
 console.log(score);
 
-if (score >= 10) {
-  document.getElementById("multiX2").disabled = false;
-}
-//  Click +2
+document.getElementById("salty").addEventListener("click", () => {
+  document.getElementById("score").innerHTML = Score;
+  document.getElementById("salty").style.transform = "rotate(45deg)";
+  setTimeout(() => {
+    document.getElementById("salty").style.transform = "rotate(0)";
+  }, 100);
 
-btnMulti.addEventListener("click", () => {
-  if (score >= priceBtnMulti) {
-    score -= priceBtnMulti;
-    valueClick += 1;
-  }
+  check();
+});
+var bonus = 0;
+document.getElementById("multiX2").addEventListener("click", () => {
+  multi();
+  bonus += 1;
+  Score -= priceBtnMulti;
+  multi(Score);
+  document.getElementById("score").innerHTML = Score;
+  console.log(Score);
+  check();
+  document.getElementById("multiX2").disabled = true;
 });
 
-if (score >= priceBtnMulti) {
-  score -= priceBtnMulti;
-  valueClick += 1;
-  priceBtnMulti += Math.floor((priceBtnMulti / 100) * 15);
+function check() {
+  if (Score > priceBtnMulti) {
+    document.getElementById("multiX2").disabled = false;
+  }
 }

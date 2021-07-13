@@ -8,11 +8,6 @@
   padding: 0;
 }
 
-html {
-  padding: 25vh 10vw;
-  text-align: center;
-}
-
 a {
   cursor: pointer;
   font-family: "Roboto Condensed", sans-serif;
@@ -144,13 +139,20 @@ body {
   text-align: center;
 }
 
+h1 {
+  padding: 10px;
+  margin: 20px;
+}
+
+.scorePart {
+  margin: 40px;
+  font-weight: bold;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
-  -ms-grid-rows: 33% 33% 33%;
-      grid-template-rows: 33% 33% 33%;
+  margin: 50px;
 }
 
 .start {
@@ -158,14 +160,14 @@ body {
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 
 .points {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
@@ -175,15 +177,15 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 
 .multi {
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  grid-column: 1/2;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -193,9 +195,43 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-row: 1/2;
+}
+
+button {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+#salty {
+  -webkit-transition: -webkit-transform 50ms ease-in;
+  transition: -webkit-transform 50ms ease-in;
+  transition: transform 50ms ease-in;
+  transition: transform 50ms ease-in, -webkit-transform 50ms ease-in;
+}
+
+#salty {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/salty.png?raw=true);
+  background-size: cover;
+}
+
+#multiX2 {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/potato-pc-multiplicator.png?raw=true);
+  background-size: cover;
+}
+
+#auto-click {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/buffering-autoclick.png?raw=true);
+  background-size: cover;
+}
+
+#boost {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/no-internet-boost.png?raw=true);
+  background-size: cover;
 }
 
 @-webkit-keyframes bg-scrolling-reverse {
@@ -225,7 +261,7 @@ body {
 body {
   margin-top: 13.5rem;
   color: #999;
-  font: 400 16px/1.5 "segoe ui", helvetica, arial, sans-serif;
+  font: 400 16px/1.5 "lato", helvetica, arial, sans-serif;
   text-align: center;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
@@ -236,12 +272,6 @@ body {
   /* IE 10+ */
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-}
-
-body::before {
-  font-size: 8rem;
-  font-weight: 100;
-  font-style: normal;
 }
 
 .flexscore {

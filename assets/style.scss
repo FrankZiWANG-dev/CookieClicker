@@ -16,19 +16,14 @@ $time: 250ms;
 $number: 3;
 $ease: cubic-bezier(0.77, 0, 0.175, 1);
 $move: 2em;
-$color: black;
 $font: "Roboto Condensed", sans-serif;
 
-html {
-  padding: 25vh 10vw;
-  text-align: center;
-}
 a {
   cursor: pointer;
   font-family: $font;
   font-weight: 900;
   user-select: none;
-  color: $color;
+  color: black;
   font-size: 0;
   transform: translate3d(0, 0, 0);
   filter: blur(0);
@@ -58,7 +53,7 @@ a {
       left: -1%;
       width: 102%;
       height: $move;
-      background: $color;
+      background: black;
       transform-origin: top center;
       transform: scaley(0.1);
       transition: transform $ease $time;
@@ -94,37 +89,78 @@ body {
   text-align: center;
 }
 
+h1 {
+  padding: 10px;
+  margin: 20px;
+}
+
+.scorePart {
+  margin: 40px;
+  font-weight: bold;
+}
+
 // GRID
 
 .container {
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 33% 33% 33%;
+  margin: 50px;
 }
 
 .start {
   grid-column: 1/2;
-  grid-row: 1/3;
+  grid-row: 1/2;
 }
 
 .points {
-  grid-column: 1/2;
+  grid-column: 1/3;
   grid-row: 3/4;
 }
 
 .auto-click {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 
 .multi {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 2/3;
 }
 
 .boost {
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 1/2;
+}
+
+// IMAGES / BUTTONS
+
+button {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  margin: 10px;
+}
+#salty {
+  transition: transform 50ms ease-in;
+}
+
+#salty {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/salty.png?raw=true);
+  background-size: cover;
+}
+
+#multiX2 {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/potato-pc-multiplicator.png?raw=true);
+  background-size: cover;
+}
+
+#auto-click {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/buffering-autoclick.png?raw=true);
+  background-size: cover;
+}
+
+#boost {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/no-internet-boost.png?raw=true);
+  background-size: cover;
 }
 
 // BACKGROUND
@@ -179,7 +215,7 @@ body {
   margin-top: 13.5rem;
 
   color: #999;
-  font: 400 16px/1.5 "segoe ui", helvetica, arial, sans-serif;
+  font: 400 16px/1.5 "lato", helvetica, arial, sans-serif;
   text-align: center;
   background: url($bg-url) repeat 0 0;
 
@@ -191,12 +227,6 @@ body {
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
-
-  &::before {
-    font-size: 8rem;
-    font-weight: 100;
-    font-style: normal;
-  }
 }
 .flexscore{
   display: flex;
