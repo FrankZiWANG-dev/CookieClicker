@@ -10,6 +10,3 @@ document.getElementById('salty').addEventListener("click",() => {
     document.getElementById("score").innerHTML = Score;
     console.log(Score);
 });
-
-
-export {Score, SingleClick};
