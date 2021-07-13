@@ -3,7 +3,7 @@ document.getElementById("boost").disabled = true;
 //Boost level to change prices and bonuses
 var BoostLevel = 0; 
 
-//buy boost
+//Level up boost and remove points for price
 function BuyBoost() {
   if (BoostLevel == 0){
     Score = Score - 10;
@@ -27,20 +27,23 @@ function BuyBoost() {
 }
 
 //Timer
+var BoostRemaining = 0;
+
 function Timing() {
 
-  var BoostRemaining = 30;
+  BoostRemaining = 30;
   var BoostTimer = document.getElementById('BoostTimer');
 
   var BoostDuration = setInterval(BoostCountdown, 1000);
 
   function BoostCountdown() {
     // console.log(Score);
-    if (BoostRemaining !== -1) {
+    if (BoostRemaining !== 0) {
       BoostTimer.innerHTML = BoostRemaining;
       BoostRemaining--;
     } 
     else {
+      BoostRemaining--;
       clearTimeout(BoostDuration);
     }
   }
@@ -71,13 +74,21 @@ var CheckBoost = setInterval(function(){BoostAvailability()},100);
 
 //activate click bonus
 function ActivateBoost() {
-  if ( (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
+  if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 2;
+      Score = Score + 1;
       document.getElementById("score").innerHTML = Score;
     });
   }
+  else if ( (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score + 1;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+
   else if ( (BoostRemaining !== 0) && (BoostLevel == 2 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
