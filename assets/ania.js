@@ -11,6 +11,13 @@ function SingleClick() {
   }
 }
 
+// Salt rotation
+
+function myFunction() {
+  var img = document.getElementById("salty");
+  img.setAttribute("class", "rotated-image");
+}
+
 //  Click +2
 
 function multi() {
@@ -21,6 +28,10 @@ console.log(score);
 
 document.getElementById("salty").addEventListener("click", () => {
   document.getElementById("score").innerHTML = Score;
+  document.getElementById("salty").style.transform = "rotate(45deg)";
+  setTimeout(() => {
+    document.getElementById("salty").style.transform = "rotate(0)";
+  }, 100);
 
   check();
 });
@@ -41,4 +52,3 @@ function check() {
     document.getElementById("multiX2").disabled = false;
   }
 }
-

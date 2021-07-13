@@ -12,26 +12,38 @@
   <body>
     <header>
       <a>
-        <span>S</span>
+        <span>G</span>
         <span>A</span>
-        <span>L</span>
-        <span>T</span>
-        <span>_</span>
-        <span>C</span>
-        <span>L</span>
+        <span>M</span>
         <span>I</span>
-        <span>C</span>
-        <span>K</span>
-        <span>E</span>
+        <span>N</span>
+        <span>G</span>
+        <span>_</span>
+        <span>S</span>
+        <span>I</span>
+        <span>M</span>
+        <span>U</span>
+        <span>L</span>
+        <span>A</span>
+        <span>T</span>
+        <span>O</span>
         <span>R</span>
       </a>
     </header>
     <main>
+      <!-- SCORE AREA -->
+      <div class="scorePart">
+        <p>Blood pressure :</p>
+        <p id="score">0000</p>
+      </div>
+
       <!-- BUTTON AREA -->
       <div class="container">
         <div class="start">
-          <button class="btn" id="start"></button>
+          <p>BE MORE SALTY!</p>
+          <p>Click it!!</p>
           <img
+
             id="salty"
             src="assets/image/salty.png"
             width="150px"
@@ -39,29 +51,58 @@
             alt="salt"
           />
         </div>
-        <div class="auto-click">
-          <button class="btn" id="auto-click">Auto-Click</button>
-        </div>
-        <div class="multi">
-          <button class="btn" id="multiX2">
-            <span class="name">Clicker x2</span>
-            <span class="price"
-              >Cost :
-              <p>25</p></span
-            >
-          </button>
-        </div>
-        <div class="boost">
-          <button class="btn" id="boost">BOOST!!</button>
-          <p>Seconds left on Boost:</p>
-          <p id="BoostTimer">0</p>
-        </div>
-      </div>
 
-      <!-- SCORE AREA -->
-      <div class="scorePart">
-        <p>Score :</p>
-        <p id="score">0000</p>
+        <div class="auto-click">
+          <p>INFINITE LAGGING!!</p>
+          <p>Autoclick X/s - Cost: X</p>
+
+          <div>
+            <img
+              id="auto-click"
+              src="assets/image/buffering-autoclick.png"
+              width="150 px"
+              height="150 px"
+              alt="buffering"
+            />
+          </div>
+        </div>
+
+        <div class="multi">
+          <p>POTATO PC!!</p>
+          <p>
+            ( <span class="name">Clicker x2</span> - Cost :
+            <span class="price">25</span> )
+          </p>
+
+          <div>
+            <img
+              id="multiX2"
+              src="assets/image/potato-pc-multiplicator.png"
+              width="150 px"
+              height="150 px"
+              alt="potato-pc"
+            />
+          </div>
+        </div>
+
+        <div class="boost">
+          <p>INTERNET SHUTDOWN!!</p>
+          <p>
+            <span id="BoostTimer">0</span> seconds of
+            <span id="boostvalue"> x2</span> Bonus - Cost:
+            <span id="boostcost"> 10</span>
+          </p>
+
+          <div>
+            <img
+              id="boost"
+              src="assets/image/no-internet-boost.png"
+              width="150 px"
+              height="150 px"
+              alt="no-internet"
+            />
+          </div>
+        </div>
       </div>
     </main>
     <footer></footer>

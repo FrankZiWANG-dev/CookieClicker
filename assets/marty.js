@@ -1,18 +1,14 @@
-var Score = 0;
-console.log(Score);
-
-function SingleClick() {
-        Score++;
-    }
+var Score = parseInt(document.getElementById("score").textContent);
 
 document.getElementById('salty').addEventListener("click",() => {
-    SingleClick();
-    document.getElementById("score").innerHTML = Score;
     console.log(Score);
+    Score++;
+    document.getElementById("score").innerHTML = Score;
 });
+//Score fonction
 
-function check(price, bonus) {
-    if (Score >= price) {
-        document.getElementById(bonus).disabled = false;
-    }
-}
+// function check(x,y) {
+//     if (Score >= x) {
+//         document.getElementById(y).disabled = false;
+//     }
+// }
