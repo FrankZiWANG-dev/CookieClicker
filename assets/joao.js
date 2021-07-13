@@ -26,7 +26,7 @@ window.setInterval(function() {
         window.setInterval(function () {console.log("Joao function clickx1 Score is = " + Score);}, 3000);
 
     } else if ((autoClickX1) && (Score > 99)) {
-        priceAutoClick = 50;
+        priceAutoClick = 100;
         functionAutoClickX25();
         document.getElementById("score").innerHTML = Score;
         autoClickX1 = false;
@@ -34,7 +34,7 @@ window.setInterval(function() {
         window.setInterval(function () {console.log("Joao function clickx25 Score is = " + Score);}, 3000);
 
     } else if ((autoClickX25) && (Score > 499)) {
-        priceAutoClick = 250;
+        priceAutoClick = 500;
         functionAutoClickX50();
         document.getElementById("score").innerHTML = Score;
         autoClickX25 = false;
@@ -42,7 +42,7 @@ window.setInterval(function() {
         window.setInterval(function () {console.log("Joao function clickx50 Score is = " + Score);}, 3000);
 
     } else if ((autoClickX50) && (Score > 4999)) {
-        priceAutoClick = 500;
+        priceAutoClick = 5000;
         functionAutoClickX100();
         document.getElementById("score").innerHTML = Score;
         autoClickX50 = false;
