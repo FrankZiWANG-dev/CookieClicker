@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style.css" /> 
 
-    <title>Cookie Clicker</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style.css" />
 
-  <body>
-    <header>
-      <a>
-        <span>S</span>
-        <span>A</span>
-        <span>L</span>
-        <span>T</span>
-        <span>_</span>
-        <span>C</span>
-        <span>L</span>
-        <span>I</span>
-        <span>C</span>
-        <span>K</span>
-        <span>E</span>
-        <span>R</span>
-      </a>
-    </header>
-    <main>
-      <!-- BUTTON AREA -->
-      <div class="container">
-        <div class="start">
-          <button class="btn" id="start"></button>
-          <img
-            id="salty"
-            src="assets/image/salty.png"
-            width="150px"
-            height="150px"
-            alt="salt"
-          />
-        </div>
-        <div class="auto-click">
-          <button class="btn" id="auto-click">Auto-Click</button>
-        </div>
-        <div class="multi">
-          <button class="btn" id="multiX2">
-            <span class="name">Clicker x2</span>
-            <span class="price"
-              >Cost :
-              <p>25</p></span
-            >
-          </button>
-        </div>
-        <div class="boost">
-          <button class="btn" id="boost">BOOST!!</button>
-          <p>Seconds left on Boost:</p>
-          <p id="BoostTimer">0</p>
-        </div>
+  <title>Cookie Clicker</title>
+</head>
+
+<body>
+  <header>
+    <a>
+      <span>S</span>
+      <span>A</span>
+      <span>L</span>
+      <span>T</span>
+      <span>_</span>
+      <span>C</span>
+      <span>L</span>
+      <span>I</span>
+      <span>C</span>
+      <span>K</span>
+      <span>E</span>
+      <span>R</span>
+    </a>
+  </header>
+  <main>
+    <!-- BUTTON AREA -->
+    <div class="container">
+      <div class="start">
+        <button class="btn" id="start"></button>
+        <img id="salty" src="assets/image/salty.png" width="150px" height="150px" alt="salt" />
       </div>
-
+      <div class="auto-click">
+        <button class="btn" id="auto-click">Auto-Click</button>
+      </div>
+      <div class="multi">
+        <button class="btn" id="multiX2">
+          <span class="name">Clicker x2</span>
+          <span class="price">Cost :
+            <p>25</p>
+          </span>
+        </button>
+      </div>
+      <div class="boost">
+        <button class="btn" id="boost">BOOST!!</button>
+        <p>Seconds left on Boost:</p>
+        <p id="BoostTimer">0</p>
+      </div>
+    </div>
+    <div class="flexscore">
       <!-- SCORE AREA -->
       <div class="scorePart">
-        <p>Score :</p>
-        <p id="score">0000</p>
+        <p class="padding">Score :</p>
+        <p class="padding" id="score">0000</p>
+        <p class="padding">HightScore :</p>
+        <p class="padding" id="hightscore">0000</p>
       </div>
-    </main>
-    <footer></footer>
-    <script type="text/javascript" src="assets/marty.js"></script>
-    <script type="text/javascript" src="assets/ania.js"></script>
-    <script type="text/javascript" src="assets/Frank.js"></script>
-    <script type="text/javascript" src="assets/joao.js"></script>
-  </body>
+      <!-- achievement AREA -->
+      <div class="achievementPart">
+        <p class="padding">Achievement 1 :</p>
+        <p id="achi1" class="padding" id="achievement">xxxx</p>
+        <p class="padding">Achievement 2 :</p>
+        <p id="achi2" class="padding" id="achievement2">xxxx</p>
+        <p class="padding">Achievement 3 :</p>
+        <p id="achi3" class="padding" id="achievement3">xxxx</p>
+        <p class="padding">Achievement 4 :</p>
+        <p id="achi4" class="padding" id="achievement4">xxxx</p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script type="text/javascript" src="assets/marty.js"></script>
+  <script type="text/javascript" src="assets/ania.js"></script>
+  <script type="text/javascript" src="assets/Frank.js"></script>
+  <script type="text/javascript" src="assets/joao.js"></script>
+</body>
+
 </html>
