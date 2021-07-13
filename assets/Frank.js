@@ -7,22 +7,37 @@ var BoostLevel = 0;
 function BuyBoost() {
   if (BoostLevel == 0){
     Score = Score - 10;
+    document.getElementById("score").innerHTML = Score;
+    document.getElementById("boostvalue").innerHTML = " x2";
+    document.getElementById("boostcost").innerHTML = " 10";
     BoostLevel++;
   }
   else if (BoostLevel == 1){
     Score = Score - 20;
+    document.getElementById("score").innerHTML = Score;
+    document.getElementById("boostvalue").innerHTML = " x4";
+    document.getElementById("boostcost").innerHTML = " 20";
     BoostLevel++;
   }
   else if (BoostLevel == 2){
     Score = Score - 30;
+    document.getElementById("score").innerHTML = Score;
+    document.getElementById("boostvalue").innerHTML = " x6";
+    document.getElementById("boostcost").innerHTML = " 30";
     BoostLevel++;
   }
   else if (BoostLevel == 3){
     Score = Score - 40;
+    document.getElementById("score").innerHTML = Score;
+    document.getElementById("boostvalue").innerHTML = " x8";
+    document.getElementById("boostcost").innerHTML = " 40";
     BoostLevel++;
   }
   else {
     Score = Score - 50;
+    document.getElementById("score").innerHTML = Score;
+    document.getElementById("boostvalue").innerHTML = " x10";
+    document.getElementById("boostcost").innerHTML = " 50";
   }
 }
 
@@ -43,7 +58,7 @@ function Timing() {
       BoostRemaining--;
     } 
     else {
-      BoostRemaining--;
+      BoostTimer.innerHTML = BoostRemaining;
       clearTimeout(BoostDuration);
     }
   }
@@ -74,42 +89,86 @@ var CheckBoost = setInterval(function(){BoostAvailability()},100);
 
 //activate click bonus
 function ActivateBoost() {
+  //lv1 = x2
   if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 1;
+      Score = Score -1 + 2;
       document.getElementById("score").innerHTML = Score;
     });
   }
-  else if ( (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
+  else if ( (bonus == 1) && (BoostRemaining !== 0) && (BoostLevel == 1 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 1;
+      Score = Score -2 + 4;
       document.getElementById("score").innerHTML = Score;
     });
   }
 
-  else if ( (BoostRemaining !== 0) && (BoostLevel == 2 ) ){
+  //lv2 = x4
+  else if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 2 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 3;
+      Score = Score -1 + 4;
       document.getElementById("score").innerHTML = Score;
     });
   }
-  else if ( (BoostRemaining !== 0) && (BoostLevel == 3 ) ){
+  else if ( (bonus ==1) && (BoostRemaining !== 0) && (BoostLevel == 2 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 10;
+      Score = Score -2 + 8;
       document.getElementById("score").innerHTML = Score;
     });
   }
-  else if ( (BoostRemaining !== 0) && (BoostLevel == 4 ) ){
+
+  //lv3 = x6
+  else if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 3 ) ){
     document.getElementById('salty').addEventListener("click",() => {
       console.log(Score);
-      Score = Score + 100;
+      Score = Score -1 + 6;
       document.getElementById("score").innerHTML = Score;
     });
   }
+  else if ( (bonus ==1) && (BoostRemaining !== 0) && (BoostLevel == 3 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score -2 + 12;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+
+  //lv4 = x8
+  else if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 4 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score -1 + 8;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+  else if ( (bonus ==1) && (BoostRemaining !== 0) && (BoostLevel == 4 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score -2 + 16;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+
+  //lv5 = x10
+  else if ( (bonus ==0) && (BoostRemaining !== 0) && (BoostLevel == 5 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score -1 + 10;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+  else if ( (bonus ==1) && (BoostRemaining !== 0) && (BoostLevel == 5 ) ){
+    document.getElementById('salty').addEventListener("click",() => {
+      console.log(Score);
+      Score = Score -2 + 20;
+      document.getElementById("score").innerHTML = Score;
+    });
+  }
+
 }
 
 //click function
