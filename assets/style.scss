@@ -16,19 +16,14 @@ $time: 250ms;
 $number: 3;
 $ease: cubic-bezier(0.77, 0, 0.175, 1);
 $move: 2em;
-$color: black;
 $font: "Roboto Condensed", sans-serif;
 
-html {
-  padding: 25vh 10vw;
-  text-align: center;
-}
 a {
   cursor: pointer;
   font-family: $font;
   font-weight: 900;
   user-select: none;
-  color: $color;
+  color: black;
   font-size: 0;
   transform: translate3d(0, 0, 0);
   filter: blur(0);
@@ -58,7 +53,7 @@ a {
       left: -1%;
       width: 102%;
       height: $move;
-      background: $color;
+      background: black;
       transform-origin: top center;
       transform: scaley(0.1);
       transition: transform $ease $time;
@@ -179,7 +174,7 @@ body {
   margin-top: 13.5rem;
 
   color: #999;
-  font: 400 16px/1.5 "segoe ui", helvetica, arial, sans-serif;
+  font: 400 16px/1.5 "lato", helvetica, arial, sans-serif;
   text-align: center;
   background: url($bg-url) repeat 0 0;
 
@@ -191,10 +186,4 @@ body {
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
-
-  &::before {
-    font-size: 8rem;
-    font-weight: 100;
-    font-style: normal;
-  }
 }
