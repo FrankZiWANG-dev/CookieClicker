@@ -1,14 +1,4 @@
-// replace score by 0
-
-let score = parseInt(document.getElementById("score").innerHTML);
-
-function NormalClick() {
-  score++;
-  document.getElementById("score").innerHTML = score;
+//normal click
+document.getElementById('salty').onclick=function(){
+    document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 1;
 }
-// replace by addEventListener instead
-document.getElementById("salty").onclick = function () {
-  NormalClick();
-};
-
-export { score, NormalClick };
