@@ -28,3 +28,9 @@ if (priceAutoClick > Score) {
 
 //debugging
 console.log("Joao final Score is = " + Score);
+
+function check(x,y) {
+    if (Score >= x) {
+        document.getElementById(y).disabled = false;
+    }
+}

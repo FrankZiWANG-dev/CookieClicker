@@ -200,9 +200,31 @@ h1 {
   grid-row: 1/2;
 }
 
-img {
+button {
+  width: 150px;
+  height: 150px;
   border-radius: 30px;
   margin: 10px;
+}
+
+#salty {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/salty.png?raw=true);
+  background-size: cover;
+}
+
+#multiX2 {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/potato-pc-multiplicator.png?raw=true);
+  background-size: cover;
+}
+
+#auto-click {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/buffering-autoclick.png?raw=true);
+  background-size: cover;
+}
+
+#boost {
+  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/no-internet-boost.png?raw=true);
+  background-size: cover;
 }
 
 @-webkit-keyframes bg-scrolling-reverse {

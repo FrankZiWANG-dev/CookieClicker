@@ -8,7 +8,6 @@ function BuyBoost() {
   if (BoostLevel == 0){
     Score = Score - 10;
     BoostLevel++;
-    console.log(BoostLevel);
   }
   else if (BoostLevel == 1){
     Score = Score - 20;
@@ -26,26 +25,6 @@ function BuyBoost() {
     Score = Score - 50;
   }
 }
-
-//Check boost availability
-function BoostAvailability() {
-  if ( (BoostLevel == 0) && (Score>= 10) ){
-    document.getElementById("boost").disabled =false;
-  }
-  else if ( (BoostLevel == 1) && (Score>= 20) ){
-    document.getElementById("boost").disabled =false;
-  }
-  else if ( (BoostLevel == 2) && (Score>= 30) ){
-    document.getElementById("boost").disabled =false;
-  }
-  else if ( (BoostLevel == 3) && (Score>= 40) ){
-    document.getElementById("boost").disabled =false;
-  }
-  else {
-    document.getElementById("boost").disabled=true;
-  }
-}
-var CheckBoost = setInterval(function(){BoostAvailability()},100);
 
 //Timer
 function Timing() {
@@ -66,6 +45,29 @@ function Timing() {
     }
   }
 }
+
+//Check boost availability
+function BoostAvailability() {
+  if ( (BoostRemaining ==0) && (BoostLevel == 0) && (Score>= 10) ){
+    document.getElementById("boost").disabled =false;
+  }
+  else if ( (BoostRemaining ==0) && (BoostLevel == 1) && (Score>= 20) ){
+    document.getElementById("boost").disabled =false;
+  }
+  else if ( (BoostRemaining ==0) && (BoostLevel == 2) && (Score>= 30) ){
+    document.getElementById("boost").disabled =false;
+  }
+  else if ( (BoostRemaining ==0) && (BoostLevel == 3) && (Score>= 40) ){
+    document.getElementById("boost").disabled =false;
+  }
+  else if ( (BoostRemaining ==0) && (BoostLevel == 4) && (Score>= 50) ){
+    document.getElementById("boost").disabled =false;
+  }
+  else {
+    document.getElementById("boost").disabled=true;
+  }
+}
+var CheckBoost = setInterval(function(){BoostAvailability()},100);
 
 //activate click bonus
 function ActivateBoost() {
