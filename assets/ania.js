@@ -1,13 +1,7 @@
 //import { score, NormalClick } from "./marty.js";
 
-let score = 0;
 let priceBtnMulti = 25; // initial price of the button
 let btnMulti = (document.getElementById("multiX2").disabled = true);
-
-console.log(score);
-
-var Score = 0;
-console.log(Score);
 
 function SingleClick() {
   if (bonus === 1) {
@@ -20,7 +14,7 @@ function SingleClick() {
 //  Click +2
 
 function multi() {
-  score += 2;
+  Score += 2;
 }
 
 console.log(score);
@@ -37,7 +31,7 @@ document.getElementById("multiX2").addEventListener("click", () => {
   Score -= priceBtnMulti;
   multi(Score);
   document.getElementById("score").innerHTML = Score;
-  console.log(score);
+  console.log(Score);
   check();
   document.getElementById("multiX2").disabled = true;
 });
@@ -47,3 +41,4 @@ function check() {
     document.getElementById("multiX2").disabled = false;
   }
 }
+
