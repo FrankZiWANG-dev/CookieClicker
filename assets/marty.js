@@ -12,4 +12,4 @@ document.getElementById('salty').addEventListener("click",() => {
 });
 
 
-export {Score, SingleClick};
+//export {Score, SingleClick};
