@@ -1,16 +1,15 @@
-var score = parseInt(document.getElementById("score").innerHTML);
-function NormalClick() {
-    score++;
-    document.getElementById("score").innerHTML = score;
-    console.log("Marty score = " + score);
-    return score;
-}
+var Score = parseInt(document.getElementById("score").innerText);
+console.log(Score);
 
-document.getElementById('salty').onclick=function(){
-    NormalClick();
-}
+function SingleClick() {
+        Score++;
+    }
 
-//debugging
-console.log("Marty score = " + score);
+document.getElementById('salty').addEventListener("click",() => {
+    SingleClick();
+    document.getElementById("score").innerHTML = Score;
+    console.log(Score);
+});
 
-export {score, NormalClick};
+
+export {Score, SingleClick};
