@@ -1,7 +1,7 @@
 //import { score, NormalClick } from "./marty.js";
 
 let priceBtnMulti = 25; // initial price of the button
-var bonus = 1;
+let bonus = 1;
 
 // Salt rotation
 
