@@ -138,8 +138,7 @@ button {
 }
 
 #salty {
-  background-image: url(https://github.com/FrankZiWANG-dev/CookieClicker/blob/dev/assets/image/salty.png?raw=true);
-  background-size: cover;
+  transition: transform 50ms ease-in;
 }
 
 #multiX2 {
